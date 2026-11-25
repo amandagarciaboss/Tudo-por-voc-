@@ -1,0 +1,433 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa História | Para Lívia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        rose: {
+                            50: '#fff1f2',
+                            100: '#ffe4e6',
+                            200: '#fecdd3',
+                            300: '#fda4af',
+                            400: '#fb7185',
+                            500: '#f43f5e',
+                            600: '#e11d48',
+                            700: '#be123c',
+                            800: '#9f1239',
+                            900: '#881337',
+                            950: '#4c0519',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-rose-500 selection:text-white overflow-x-hidden">
+
+    <!-- Fundo com brilhos suaves -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-rose-600/20 rounded-full blur-3xl"></div>
+        <div class="absolute top-1/3 -right-40 w-96 h-96 bg-purple-600/15 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-1/4 w-96 h-96 bg-rose-500/10 rounded-full blur-3xl"></div>
+    </div>
+
+    <!-- Navegação Flutuante -->
+    <nav class="fixed top-4 left-1/2 -translate-x-1/2 z-50 bg-slate-900/85 backdrop-blur-md border border-slate-800/80 px-5 py-2.5 rounded-full shadow-2xl flex items-center gap-4 sm:gap-6 text-xs sm:text-sm max-w-[95vw]">
+        <a href="#inicio" class="text-slate-300 hover:text-rose-400 transition-colors">Início</a>
+        <a href="#galeria" class="text-slate-300 hover:text-rose-400 transition-colors">Fotos</a>
+        <a href="#linha-do-tempo" class="text-slate-300 hover:text-rose-400 transition-colors hidden sm:inline">Jornada</a>
+        <a href="#mapa" class="text-slate-300 hover:text-rose-400 transition-colors hidden sm:inline">Mapa</a>
+        <a href="#video" class="text-slate-300 hover:text-rose-400 transition-colors">Vídeo</a>
+        <a href="#pedido" class="bg-rose-600 hover:bg-rose-500 text-white px-3.5 py-1 rounded-full font-medium transition-all shadow-lg shadow-rose-600/30 whitespace-nowrap">Para Você</a>
+    </nav>
+
+    <!-- 1. SEÇÃO HERO / DECLARAÇÃO PRINCIPAL -->
+    <header id="inicio" class="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 pt-20 pb-12 text-center">
+        <div class="max-w-3xl mx-auto space-y-6">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-300 text-xs sm:text-sm font-medium mb-2 animate-pulse">
+                <i data-lucide="heart" class="w-4 h-4 fill-rose-500 text-rose-500"></i>
+                <span>Para o amor da minha vida, Lívia</span>
+            </div>
+
+            <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white leading-tight">
+                Nada nesse mundo vai <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-pink-300 to-rose-500 italic">nos separar.</span>
+            </h1>
+
+            <p class="text-slate-300 text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl mx-auto font-light">
+                É maravilhoso cada segundo que estamos juntas. Eu sei que tivemos altos e baixos, dias de tempestade e dias de sol, mas cada obstáculo só provou o quanto somos fortes. Vamos vencer tudo, viver juntas, realizar nossos sonhos e construir a nossa vida lado a lado.
+            </p>
+
+            <!-- Moldura de Foto Principal (Arquivo: foto-principal.jpg) -->
+            <div class="pt-6">
+                <div class="relative max-w-md mx-auto group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-rose-500 to-purple-600 rounded-3xl blur opacity-40 group-hover:opacity-70 transition duration-500"></div>
+                    <div class="relative bg-slate-900 rounded-3xl p-2 border border-slate-800">
+                        <img src="Foto-principal.jpg" 
+                             onerror="this.src='https://placehold.co/800x600/1e293b/fda4af?text=Coloque+Foto-principal.jpg+na+pasta'" 
+                             alt="Nós duas" 
+                             class="w-full h-72 sm:h-80 object-cover rounded-2xl">
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-6">
+                <a href="#galeria" class="inline-flex flex-col items-center text-slate-400 hover:text-rose-400 transition-colors text-xs gap-2">
+                    <span>Role para reviver nossa história</span>
+                    <i data-lucide="chevron-down" class="w-5 h-5 animate-bounce"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. GALERIA DE FOTOS -->
+    <section id="galeria" class="relative z-10 py-20 px-4 max-w-6xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Nossos Momentos em Fotos</h2>
+            <p class="text-slate-400 text-sm sm:text-base">Cada registro guarda um pedaço do que construímos e do quanto somos felizes juntas.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Foto 1 (Arquivo: Foto1.jpg) -->
+            <div class="bg-slate-900/70 backdrop-blur-sm border border-slate-800 rounded-3xl p-4 flex flex-col gap-3 hover:border-rose-500/40 transition-all">
+                <div class="relative overflow-hidden rounded-2xl aspect-[4/3] bg-slate-800">
+                    <img src="Foto1.jpg" onerror="this.src='https://placehold.co/600x450/1e293b/fda4af?text=Coloque+Foto1.jpg+na+pasta'" alt="Momento 1" class="w-full h-full object-cover">
+                </div>
+                <p class="font-serif text-lg text-rose-200">O seu sorriso que ilumina tudo</p>
+                <p class="text-xs text-slate-400">Cada instante ao seu lado se torna a minha memória favorita.</p>
+            </div>
+
+            <!-- Foto 2 (Arquivo: Foto2.jpg) -->
+            <div class="bg-slate-900/70 backdrop-blur-sm border border-slate-800 rounded-3xl p-4 flex flex-col gap-3 hover:border-rose-500/40 transition-all">
+                <div class="relative overflow-hidden rounded-2xl aspect-[4/3] bg-slate-800">
+                    <img src="Foto2.jpg" onerror="this.src='https://placehold.co/600x450/1e293b/fda4af?text=Coloque+Foto2.jpg+na+pasta'" alt="Momento 2" class="w-full h-full object-cover">
+                </div>
+                <p class="font-serif text-lg text-rose-200">Nossa cumplicidade única</p>
+                <p class="text-xs text-slate-400">Mesmo em silêncio, a gente se entende como ninguém.</p>
+            </div>
+
+            <!-- Foto 3 (Arquivo: Foto3.jpg) -->
+            <div class="bg-slate-900/70 backdrop-blur-sm border border-slate-800 rounded-3xl p-4 flex flex-col gap-3 hover:border-rose-500/40 transition-all sm:col-span-2 lg:col-span-1">
+                <div class="relative overflow-hidden rounded-2xl aspect-[4/3] bg-slate-800">
+                    <img src="Foto3.jpg" onerror="this.src='https://placehold.co/600x450/1e293b/fda4af?text=Coloque+Foto3.jpg+na+pasta'" alt="Momento 3" class="w-full h-full object-cover">
+                </div>
+                <p class="font-serif text-lg text-rose-200">O futuro que vamos viver</p>
+                <p class="text-xs text-slate-400">Nosso lar, nossa paz, nossa vida juntas para sempre.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. LINHA DO TEMPO INTERATIVA -->
+    <section id="linha-do-tempo" class="relative z-10 py-20 px-4 max-w-4xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+            <span class="text-rose-400 text-xs uppercase tracking-widest font-semibold">Capítulo por Capítulo</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Nossa Linha do Tempo</h2>
+            <p class="text-slate-400 text-sm sm:text-base">Cada fase que nos trouxe até aqui e nos fez ter certeza de que pertencemos uma à outra.</p>
+        </div>
+
+        <div class="relative border-l-2 border-rose-500/30 ml-4 sm:ml-1/2 space-y-12 pb-4">
+            <div class="relative pl-8 sm:pl-10 group">
+                <div class="absolute -left-[13px] top-1 w-6 h-6 rounded-full bg-slate-950 border-2 border-rose-500 flex items-center justify-center group-hover:scale-125 transition-transform">
+                    <div class="w-2 h-2 rounded-full bg-rose-400"></div>
+                </div>
+                <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 hover:border-rose-500/50 transition-all shadow-lg">
+                    <div class="flex items-center gap-2 text-rose-400 text-xs font-semibold uppercase tracking-wider mb-2">
+                        <i data-lucide="message-circle-heart" class="w-4 h-4"></i>
+                        <span>O Começo de Tudo</span>
+                    </div>
+                    <h3 class="font-serif text-xl sm:text-2xl font-bold text-white mb-2">O Primeiro Dia de Conversas</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Onde tudo começou. As primeiras mensagens, a curiosidade, o frio na barriga e aquela sensação instantânea de que o assunto nunca acabava. Ali, sem saber, estávamos escrevendo as primeiras linhas da nossa história.
+                    </p>
+                </div>
+            </div>
+
+            <div class="relative pl-8 sm:pl-10 group">
+                <div class="absolute -left-[13px] top-1 w-6 h-6 rounded-full bg-slate-950 border-2 border-purple-400 flex items-center justify-center group-hover:scale-125 transition-transform">
+                    <div class="w-2 h-2 rounded-full bg-purple-400"></div>
+                </div>
+                <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 hover:border-purple-400/50 transition-all shadow-lg">
+                    <div class="flex items-center gap-2 text-purple-400 text-xs font-semibold uppercase tracking-wider mb-2">
+                        <i data-lucide="gamepad-2" class="w-4 h-4"></i>
+                        <span>Nossa Conexão</span>
+                    </div>
+                    <h3 class="font-serif text-xl sm:text-2xl font-bold text-white mb-2">As Noites de Jogos</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        As madrugadas jogando juntas, as risadas nas calls, as partidas épicas e a companhia que fazia as horas voarem. Não importava o jogo, o melhor prêmio sempre foi ter você ali comigo.
+                    </p>
+                </div>
+            </div>
+
+            <div class="relative pl-8 sm:pl-10 group">
+                <div class="absolute -left-[13px] top-1 w-6 h-6 rounded-full bg-slate-950 border-2 border-amber-400 flex items-center justify-center group-hover:scale-125 transition-transform">
+                    <div class="w-2 h-2 rounded-full bg-amber-400"></div>
+                </div>
+                <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 hover:border-amber-400/50 transition-all shadow-lg">
+                    <div class="flex items-center gap-2 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-2">
+                        <i data-lucide="shield-check" class="w-4 h-4"></i>
+                        <span>Aprendizado e Força</span>
+                    </div>
+                    <h3 class="font-serif text-xl sm:text-2xl font-bold text-white mb-2">As Brigas e os Dias Difíceis</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Nem tudo foi perfeito, e tudo bem. Tivemos nossas brigas, desentendimentos e momentos difíceis. Mas cada tempestade nos ensinou a ouvir, a ceder e a escolher o nosso amor acima de qualquer orgulho.
+                    </p>
+                </div>
+            </div>
+
+            <div class="relative pl-8 sm:pl-10 group">
+                <div class="absolute -left-[13px] top-1 w-6 h-6 rounded-full bg-slate-950 border-2 border-emerald-400 flex items-center justify-center group-hover:scale-125 transition-transform">
+                    <div class="w-2 h-2 rounded-full bg-emerald-400"></div>
+                </div>
+                <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 hover:border-emerald-400/50 transition-all shadow-lg">
+                    <div class="flex items-center gap-2 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-2">
+                        <i data-lucide="sun" class="w-4 h-4"></i>
+                        <span>Pura Felicidade</span>
+                    </div>
+                    <h3 class="font-serif text-xl sm:text-2xl font-bold text-white mb-2">Os Dias Bons e Inesquecíveis</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Os abraços apertados, os planos para o futuro, o carinho que cura qualquer dia ruim. São esses dias que me dão a certeza absoluta de que eu quero viver todas as minhas manhãs ao seu lado, Lívia.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. MAPA DA NOSSA JORNADA -->
+    <section id="mapa" class="relative z-10 py-20 px-4 max-w-5xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+            <span class="text-rose-400 text-xs uppercase tracking-widest font-semibold">O Caminho do Nosso Amor</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Mapa dos Nossos Passos</h2>
+            <p class="text-slate-400 text-sm sm:text-base">Toque nos pontos do mapa para explorar cada parada da nossa caminhada.</p>
+        </div>
+
+        <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-4 sm:p-8 shadow-2xl">
+            <div class="relative w-full overflow-hidden rounded-2xl bg-slate-950 border border-slate-800/80 p-4">
+                <svg viewBox="0 0 800 320" class="w-full h-auto select-none">
+                    <defs>
+                        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="1"/>
+                        </pattern>
+                        <linearGradient id="routeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#f43f5e" />
+                            <stop offset="50%" stop-color="#c084fc" />
+                            <stop offset="100%" stop-color="#fb7185" />
+                        </linearGradient>
+                    </defs>
+                    <rect width="800" height="320" fill="url(#grid)" />
+
+                    <path d="M 90 230 C 180 230, 200 90, 290 90 C 380 90, 400 240, 490 240 C 580 240, 600 100, 710 100" 
+                          fill="none" stroke="url(#routeGrad)" stroke-width="4" stroke-dasharray="10 8" stroke-linecap="round" />
+
+                    <g class="cursor-pointer transition-transform hover:scale-110" onclick="selectMapPoint(0)">
+                        <circle cx="90" cy="230" r="22" fill="#f43f5e" fill-opacity="0.2" />
+                        <circle cx="90" cy="230" r="12" fill="#f43f5e" stroke="#fff" stroke-width="2.5" />
+                        <text x="90" y="272" text-anchor="middle" fill="#fda4af" font-size="13" font-weight="600">1. Primeiro Oi</text>
+                    </g>
+
+                    <g class="cursor-pointer transition-transform hover:scale-110" onclick="selectMapPoint(1)">
+                        <circle cx="290" cy="90" r="22" fill="#a855f7" fill-opacity="0.2" />
+                        <circle cx="290" cy="90" r="12" fill="#a855f7" stroke="#fff" stroke-width="2.5" />
+                        <text x="290" y="55" text-anchor="middle" fill="#d8b4fe" font-size="13" font-weight="600">2. Noites de Jogos</text>
+                    </g>
+
+                    <g class="cursor-pointer transition-transform hover:scale-110" onclick="selectMapPoint(2)">
+                        <circle cx="490" cy="240" r="22" fill="#f59e0b" fill-opacity="0.2" />
+                        <circle cx="490" cy="240" r="12" fill="#f59e0b" stroke="#fff" stroke-width="2.5" />
+                        <text x="490" y="282" text-anchor="middle" fill="#fcd34d" font-size="13" font-weight="600">3. Superações</text>
+                    </g>
+
+                    <g class="cursor-pointer transition-transform hover:scale-110" onclick="selectMapPoint(3)">
+                        <circle cx="710" cy="100" r="26" fill="#e11d48" fill-opacity="0.3" />
+                        <circle cx="710" cy="100" r="14" fill="#e11d48" stroke="#fff" stroke-width="3" />
+                        <text x="710" y="62" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">4. Nosso Lar ❤️</text>
+                    </g>
+                </svg>
+            </div>
+
+            <div id="map-detail-card" class="mt-6 bg-slate-950/90 border border-rose-500/30 rounded-2xl p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div>
+                    <span id="map-point-badge" class="inline-block px-2.5 py-0.5 rounded-full text-xs font-medium bg-rose-500/20 text-rose-300 mb-1">Parada 1 de 4</span>
+                    <h4 id="map-point-title" class="font-serif text-xl font-bold text-white">1. O Primeiro Dia de Conversas</h4>
+                    <p id="map-point-desc" class="text-slate-300 text-sm mt-1">Onde nossos caminhos se cruzaram e a vontade de conversar todos os dias nasceu.</p>
+                </div>
+                <div class="flex gap-2 shrink-0 self-end sm:self-center">
+                    <button onclick="prevMapPoint()" class="p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 transition-colors" aria-label="Anterior">
+                        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                    </button>
+                    <button onclick="nextMapPoint()" class="p-2.5 rounded-xl bg-rose-600 hover:bg-rose-500 text-white transition-colors" aria-label="Próximo">
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SEÇÃO DO VÍDEO ESPECIAL (Arquivo: Video.mp4) -->
+    <section id="video" class="relative z-10 py-20 px-4 max-w-4xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-10 space-y-3">
+            <span class="text-rose-400 text-xs uppercase tracking-widest font-semibold">Nossa Lembrança em Movimento</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">A Razão é Você &lt;3</h2>
+            <p class="text-slate-400 text-sm sm:text-base">"Eu encontrei uma razão para mudar quem eu costumava ser, uma razão para começar tudo de novo... e a razão é você."</p>
+        </div>
+
+        <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-4 sm:p-6 shadow-2xl">
+            <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-black border border-slate-800 flex items-center justify-center">
+                <video controls playsinline preload="metadata" class="w-full h-full object-contain">
+                    <source src="Video.mp4" type="video/mp4">
+                    Seu navegador não suporta a reprodução de vídeo.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. O NOVO PEDIDO FINAL -->
+    <section id="pedido" class="relative z-10 py-24 px-4">
+        <div class="max-w-3xl mx-auto bg-gradient-to-b from-slate-900 to-rose-950/40 border border-rose-500/30 rounded-3xl p-8 sm:p-14 text-center shadow-2xl relative overflow-hidden">
+            
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-rose-500/20 border border-rose-400/40 text-rose-400 mb-6">
+                <i data-lucide="sparkles" class="w-8 h-8"></i>
+            </div>
+
+            <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white mb-6 leading-tight">
+                Lívia, eu te escolho hoje e todos os dias.
+            </h2>
+
+            <p class="text-slate-200 text-base sm:text-lg leading-relaxed mb-8 max-w-xl mx-auto">
+                Depois de tudo que vivemos, de cada risada nas madrugadas, de cada desafio superado e de todo amor que construímos... eu quero renovar a nossa promessa e te fazer aquele pedido de novo:
+            </p>
+
+            <div class="bg-slate-950/60 border border-rose-400/30 rounded-2xl p-6 sm:p-8 mb-8 max-w-lg mx-auto">
+                <p class="font-serif italic text-2xl sm:text-3xl text-rose-300">
+                    "Aceita continuar escrevendo essa história comigo, viver juntas e ser minha para sempre?"
+                </p>
+            </div>
+
+            <div id="proposal-buttons" class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <button onclick="acceptProposal()" class="w-full sm:w-auto px-8 py-4 rounded-full bg-rose-600 hover:bg-rose-500 text-white font-semibold text-base sm:text-lg shadow-xl shadow-rose-600/30 transition-all transform hover:scale-105 flex items-center justify-center gap-2">
+                    <i data-lucide="heart" class="w-5 h-5 fill-white"></i>
+                    <span>SIM, MIL VEZES SIM!</span>
+                </button>
+                <button id="shy-button" onmouseover="moveButton()" onclick="moveButton()" class="w-full sm:w-auto px-6 py-4 rounded-full bg-slate-800 text-slate-400 font-medium text-sm transition-all">
+                    Pensar um pouquinho...
+                </button>
+            </div>
+
+            <div id="celebration-message" class="hidden mt-8 p-6 rounded-2xl bg-rose-500/20 border border-rose-400/50 animate-fade-in">
+                <p class="font-serif text-2xl sm:text-3xl text-white font-bold mb-2">Eu te amo infinitamente, Lívia! ❤️</p>
+                <p class="text-rose-200 text-sm sm:text-base">Nada nesse mundo vai nos separar. O nosso para sempre começa agora!</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="relative z-10 py-8 text-center text-slate-500 text-xs border-t border-slate-900">
+        <p>Feito com todo o meu amor, exclusivamente para você, Lívia.</p>
+    </footer>
+
+    <div id="hearts-container" class="fixed inset-0 pointer-events-none z-50 overflow-hidden"></div>
+
+    <script>
+        lucide.createIcons();
+
+        // ==========================================
+        // MAPA INTERATIVO E PEDIDO FINAL
+        // ==========================================
+        const mapPoints = [
+            {
+                badge: "Parada 1 de 4",
+                title: "1. O Primeiro Dia de Conversas",
+                desc: "Onde nossos caminhos se cruzaram e a vontade de conversar todos os dias nasceu."
+            },
+            {
+                badge: "Parada 2 de 4",
+                title: "2. As Noites de Jogos",
+                desc: "Madrugadas de risadas, parceria e a certeza de que sua companhia é o meu lugar favorito."
+            },
+            {
+                badge: "Parada 3 de 4",
+                title: "3. As Brigas e Superações",
+                desc: "Os momentos difíceis que nos testaram, mas só provaram que o nosso amor é maior que tudo."
+            },
+            {
+                badge: "Parada 4 de 4",
+                title: "4. Os Dias Bons e Nosso Futuro Juntas",
+                desc: "A nossa vida lado a lado, vencendo tudo e realizando cada sonho que planejamos."
+            }
+        ];
+
+        let currentMapIndex = 0;
+
+        function selectMapPoint(index) {
+            currentMapIndex = index;
+            const point = mapPoints[index];
+            document.getElementById('map-point-badge').textContent = point.badge;
+            document.getElementById('map-point-title').textContent = point.title;
+            document.getElementById('map-point-desc').textContent = point.desc;
+        }
+
+        function nextMapPoint() {
+            currentMapIndex = (currentMapIndex + 1) % mapPoints.length;
+            selectMapPoint(currentMapIndex);
+        }
+
+        function prevMapPoint() {
+            currentMapIndex = (currentMapIndex - 1 + mapPoints.length) % mapPoints.length;
+            selectMapPoint(currentMapIndex);
+        }
+
+        function moveButton() {
+            const btn = document.getElementById('shy-button');
+            const x = (Math.random() - 0.5) * 120;
+            const y = (Math.random() - 0.5) * 60;
+            btn.style.transform = `translate(${x}px, ${y}px)`;
+        }
+
+        function acceptProposal() {
+            document.getElementById('proposal-buttons').classList.add('hidden');
+            document.getElementById('celebration-message').classList.remove('hidden');
+            launchHearts();
+        }
+
+        function launchHearts() {
+            const container = document.getElementById('hearts-container');
+            for (let i = 0; i < 40; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.innerHTML = '❤️';
+                    heart.style.position = 'absolute';
+                    heart.style.left = Math.random() * 100 + 'vw';
+                    heart.style.bottom = '-30px';
+                    heart.style.fontSize = (Math.random() * 20 + 16) + 'px';
+                    heart.style.opacity = Math.random() * 0.5 + 0.5;
+                    heart.style.transition = 'transform 3.5s ease-out, opacity 3.5s ease-out';
+                    container.appendChild(heart);
+
+                    requestAnimationFrame(() => {
+                        heart.style.transform = `translateY(-110vh) rotate(${(Math.random() - 0.5) * 60}deg)`;
+                        heart.style.opacity = '0';
+                    });
+
+                    setTimeout(() => heart.remove(), 3600);
+                }, i * 80);
+            }
+        }
+    </script>
+</body>
+</html>
+```
